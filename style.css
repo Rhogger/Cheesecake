@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 6.25%;
+  --primary-font: "Source Serif 4", serif;
+  --color: #A54328;
+}
+
+body{
+  font-family: var(--primary-font);
+  font-size: 14rem;
+  color: var(--color);
+
+  background-image: url(assets/background.png);
+
+  height: 100vh;
+
+  padding: 53rem 37rem;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 34rem;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  gap: 47rem;
+}
+
+#about-recipe{
+  align-items: center;
+
+  h1{
+    font-size: 28rem;
+  }
+
+  img{
+    width: 300rem;
+  }
+}
+
+#recipe{
+  gap: 36rem;
+
+  #ingredients li,#directions li{
+    margin-left: 25rem;
+  }
+
+  button{
+    padding: 7rem 13rem;
+    border: none;
+    border-radius: 6px;
+  
+    max-width: 94rem;
+  
+    font-size: 10rem;
+    font-weight: 500;
+    text-align: center;
+    color: #FFF;
+  
+    background-color: var(--color);
+  }
+}
+
+@media (min-width: 1180px) {
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main{
+    flex-direction: row;
+    justify-content: center;
+    gap: 180rem;
+  }
+
+  section{
+    width: 100%;
+  }
+
+  #about-recipe{
+    max-width: 435rem;
+    gap: 66rem;
+
+    h1{
+    font-size: 40rem;
+    }
+
+    p{
+      font-size: 20rem;
+    }
+
+    img{
+      width: 410rem;
+    }
+  }
+
+  #recipe{
+    max-width: 525rem;
+
+    h2{
+      font-size: 40rem;
+    }
+
+    #ingredients *, #directions *{
+      font-size: 20rem;
+    }
+
+    button{
+      font-size: 14rem;
+    
+      padding: 10rem 20rem;
+
+      max-width: 130rem;
+    }
+  }
+
+
+}
