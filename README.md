@@ -20,7 +20,17 @@
 
 <div align="center">
 
-![Preview](assets/Preview.png)
+### Desktop
+
+![Preview](assets/PC.png)
+
+</div>
+
+<div align="center">
+
+### Mobile
+
+![Preview](assets/Mobile.png)
 
 </div>
 
