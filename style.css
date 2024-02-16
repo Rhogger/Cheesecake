@@ -1,127 +1,109 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-:root{
+:root {
   font-size: 6.25%;
-  --primary-font: "Source Serif 4", serif;
+  font-family: "Source Serif 4", serif;
+
   --color: #A54328;
 }
 
-body{
-  font-family: var(--primary-font);
-  font-size: 14rem;
+body {
   color: var(--color);
 
   background-image: url(assets/background.png);
-
-  height: 100vh;
-
-  padding: 53rem 37rem;
 }
 
-main{
+main {
+  box-sizing: content-box;
+  padding: 56rem 32rem;
+  margin-inline: auto;
+
+  max-width: 320rem;
+
   display: flex;
   flex-direction: column;
   gap: 34rem;
 }
 
-section{
+section {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  gap: 47rem;
-}
-
-#about-recipe{
-  align-items: center;
-
-  h1{
-    font-size: 28rem;
-  }
-
-  img{
-    width: 300rem;
-  }
-}
-
-#recipe{
   gap: 36rem;
-
-  #ingredients li,#directions li{
-    margin-left: 25rem;
-  }
-
-  button{
-    padding: 7rem 13rem;
-    border: none;
-    border-radius: 6px;
-  
-    max-width: 94rem;
-  
-    font-size: 10rem;
-    font-weight: 500;
-    text-align: center;
-    color: #FFF;
-  
-    background-color: var(--color);
-  }
 }
 
-@media (min-width: 1180px) {
-  body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  main{
+h1,
+h2 {
+  font-size: clamp(28rem, 10rem + 2vw, 40rem);
+  line-height: clamp(36rem, 10rem + 2vw, 50rem);
+}
+
+p,
+li,
+h3 {
+  font-size: clamp(14rem, 1vw + 4rem, 20rem);
+  line-height: clamp(18rem, 1vw + 10rem, 24rem);
+}
+
+#about-recipe img {
+  width: 100%;
+}
+
+#recipe {
+  gap: 36rem;
+}
+
+#ingredients li,
+#directions li {
+  margin-left: 25rem;
+}
+
+#recipe button {
+  max-width: 94rem;
+  padding: 8rem 12rem;
+  border: none;
+  border-radius: 6rem;
+
+  font-family: "Source Serif 4", serif;
+  font-size: 10rem;
+  font-weight: 500;
+  text-align: center;
+  color: #FFF;
+
+  background-color: var(--color);
+}
+
+
+@media (min-width: 768px) {
+  main {
+    padding: 90rem 60rem;
+
     flex-direction: row;
-    justify-content: center;
-    gap: 180rem;
+    gap: 160rem;
+    max-width: fit-content;
   }
 
-  section{
-    width: 100%;
+  section {
+    flex: 1;
   }
 
-  #about-recipe{
-    max-width: 435rem;
+  #about-recipe {
     gap: 66rem;
-
-    h1{
-    font-size: 40rem;
-    }
-
-    p{
-      font-size: 20rem;
-    }
-
-    img{
-      width: 410rem;
-    }
   }
 
-  #recipe{
-    max-width: 525rem;
+  #recipe button {
+    font-size: 14rem;
 
-    h2{
-      font-size: 40rem;
-    }
+    padding: 10rem 20rem;
 
-    #ingredients *, #directions *{
-      font-size: 20rem;
-    }
-
-    button{
-      font-size: 14rem;
-    
-      padding: 10rem 20rem;
-
-      max-width: 130rem;
-    }
+    max-width: 130rem;
   }
-
-
 }
